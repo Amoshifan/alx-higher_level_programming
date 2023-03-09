@@ -1,2 +1,1 @@
-0x00. Python - Hello, World
-Python
+python - Hello, World
