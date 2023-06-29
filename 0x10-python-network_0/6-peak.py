@@ -1,24 +1,97 @@
 #!/usr/bin/python3
-"""script for finding peak in list of ints, interview prep
-"""
-
-"""
-    THOUGHT PROCESS
-        it is not sorted, so sorting would take n(log(n))
-            -> not worth sorting
-        looping through and keeping track of max (brute force)
-            -> O(n)
-
-        possibly looping from each end reducing to 1/2 run time
-            -> still O(n)
-"""
+""" Finds Peak values """
 
 
 def find_peak(list_of_integers):
-    """BRUTE force implementation for question
-    """
-    max_i = None
-    for ele in list_of_integers:
-        if max_i is None or max_i < ele:
-            max_i = ele
-    return max_i
+    """Find the peak"""
+    list_l = len(list_of_integers)
+    if list_l is 0:
+        return None
+    peak = binary_search(list_of_integers, 0, list_l - 1)
+    return list_of_integers[peak]
+
+
+""" binary search algorithim """
+
+
+def binary_search(a, lo, hi):
+    """Recursive binary search of the peak"""
+    if lo >= hi:
+        return lo
+    mid = ((hi - lo) // 2) + lo
+    if a[mid] > a[mid + 1]:
+        return binary_search(a, lo, mid)
+    else:
+        return binary_search(a, mid + 1, hi)#!/usr/bin/python3
+""" Finds Peak values """
+
+
+def find_peak(list_of_integers):
+    """Find the peak"""
+    list_l = len(list_of_integers)
+    if list_l is 0:
+        return None
+    peak = binary_search(list_of_integers, 0, list_l - 1)
+    return list_of_integers[peak]
+
+
+""" binary search algorithim """
+
+
+def binary_search(a, lo, hi):
+    """Recursive binary search of the peak"""
+    if lo >= hi:
+        return lo
+    mid = ((hi - lo) // 2) + lo
+    if a[mid] > a[mid + 1]:
+        return binary_search(a, lo, mid)
+    else:
+        return binary_search(a, mid + 1, hi)#!/usr/bin/python3
+""" Finds Peak values """
+
+
+def find_peak(list_of_integers):
+    """Find the peak"""
+    list_l = len(list_of_integers)
+    if list_l is 0:
+        return None
+    peak = binary_search(list_of_integers, 0, list_l - 1)
+    return list_of_integers[peak]
+
+
+""" binary search algorithim """
+
+
+def binary_search(a, lo, hi):
+    """Recursive binary search of the peak"""
+    if lo >= hi:
+        return lo
+    mid = ((hi - lo) // 2) + lo
+    if a[mid] > a[mid + 1]:
+        return binary_search(a, lo, mid)
+    else:
+        return binary_search(a, mid + 1, hi)#!/usr/bin/python3
+""" Finds Peak values """
+
+
+def find_peak(list_of_integers):
+    """Find the peak"""
+    list_l = len(list_of_integers)
+    if list_l is 0:
+        return None
+    peak = binary_search(list_of_integers, 0, list_l - 1)
+    return list_of_integers[peak]
+
+
+""" binary search algorithim """
+
+
+def binary_search(a, lo, hi):
+    """Recursive binary search of the peak"""
+    if lo >= hi:
+        return lo
+    mid = ((hi - lo) // 2) + lo
+    if a[mid] > a[mid + 1]:
+        return binary_search(a, lo, mid)
+    else:
+        return binary_search(a, mid + 1, hi)
